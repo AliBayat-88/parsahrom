@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'irancell';
+        src: url('/fonts/irancell.otf') format('opentype');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'moshreq-bold';
+        src: url('/fonts/HTMoshreqPro-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'moshreq-heavy';
+        src: url('/fonts/HTMoshreqPro-Heavy.ttf') format('truetype');
+        font-weight: 800;
+        font-style: normal;
+    }
+}
