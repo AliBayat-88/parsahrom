@@ -1,10 +1,11 @@
-
 export const Logo = () => {
-  return (
-      <div className="flex gap-2 items-center">
-        <img src="/logo/logo.png" className="sm:w-10 w-9 h-9 sm:h-10"/>
-        <h1 className="font-moshreq_bold dark:text-white text-black text-2xl  sm:text-4xl inline-block">پارس‌اهرم</h1>
-      </div>
-
-  );
+    return (
+        <a href="#" className="flex gap-x-2 items-center group">
+            {/* ابعاد تصویر و لوگو همگام شدند */}
+            <img src="/logo/logo.png" alt="پارس اهرم" className="w-8 h-8 sm:w-9 sm:h-9 object-contain" />
+            <h1 className="font-moshreq_bold dark:text-white text-slate-900 text-xl sm:text-2xl leading-none">
+                پارس‌اهرم
+            </h1>
+        </a>
+    );
 };

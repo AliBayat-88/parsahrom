@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 export const Slogan = () => {
     return (
-        <div className="text-3xl font-irancell_semibold text-center">
+        <div className="text-xl sm:text-3xl font-irancell_semibold text-center">
             <Typewriter
                 onInit={(typewriter) => {
                     typewriter
