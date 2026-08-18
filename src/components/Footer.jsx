@@ -1,5 +1,5 @@
 import { Logo } from "./Logo.jsx";
-import {CATEGORIES, CONTACT_INFO, QUICK_LINKS, SOCIAL_LINKS} from "../constants/footerData.jsx";
+import {CATEGORIES, CONTACT_INFO, QUICK_LINKS} from "../constants/footerData.jsx";
 
 
 
@@ -14,18 +14,6 @@ export const Footer = () => {
                         <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mt-2">
                             طراح و تولیدکننده تخصصی تجهیزات تست محیطی، فریزرها و محفظه‌های آزمون صنعتی و آزمایشگاهی با استانداردهای بین‌المللی.
                         </p>
-                        <div className="flex items-center gap-x-3 pt-2">
-                            {SOCIAL_LINKS.map((item) => (
-                                <a
-                                    key={item.id}
-                                    href={item.href}
-                                    aria-label={item.label}
-                                    className="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 flex items-center justify-center text-slate-300 hover:text-white transition-colors border border-slate-700/50"
-                                >
-                                    {item.icon}
-                                </a>
-                            ))}
-                        </div>
                     </div>
 
                     <div>

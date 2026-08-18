@@ -35,8 +35,6 @@ export const SOCIAL_LINKS = [
 export const QUICK_LINKS = [
     { id: "products", title: "محصولات و تجهیزات", href: "#" },
     { id: "services", title: "خدمات پس از فروش و گارانتی", href: "#" },
-    { id: "calibration", title: "درخواست کالیبراسیون", href: "#" },
-    { id: "about", title: "درباره پارس‌اهرم", href: "#" },
     { id: "contact", title: "تماس با کارشناسان", href: "#" },
 ];
 

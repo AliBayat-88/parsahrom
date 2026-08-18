@@ -9,7 +9,7 @@ export const MobileMenu = ({ isOpen, menuItems }) => {
                     {menuItems.map((item) => (
                         <li className="flex justify-between dark:child:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-md items-center" key={item.id}>
                             <a
-                                href="#"
+                                href={item.href}
                                 className="flex items-center gap-x-3 px-4 py-3 rounded-lg text-primary dark:text-darkPrimary  transition-colors group"
                             >
                                 <div className="h-[24px] w-[24px] flex items-center justify-center">
