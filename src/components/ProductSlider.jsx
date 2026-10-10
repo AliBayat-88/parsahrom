@@ -5,7 +5,40 @@ import { ProductCard } from "./ProductCard.jsx";
 import "swiper/css";
 
 export const ProductSlider = () => {
-    const products = [1, 2, 3, 4, 5, 6, 7, 8];
+    const products = [
+        {
+            id: 1,
+            title: "فریزر ایستاده درب‌دار",
+            description: "تجهیزات سرمایشی صنعتی با دقت دمایی بالا و استانداردهای آزمایشگاهی",
+            code: "PA-402",
+            cover: "/Freezer-With-Door-removebg-preview.png",
+          src:"product/1"
+        },
+        {
+            id: 2,
+            title: "نازل پاشش سالت‌اسپری (مدل آمریکا)",
+            description: "تولید تخصصی پارس‌اهرم با پاشش یکنواخت و مقاومت حداکثری در برابر خوردگی نمک",
+            code: "PA-NZ-01",
+            cover: null, // نمونه بدون تصویر
+          src:"product/1"
+        },
+        {
+            id: 3,
+            title: "فریزر آزمایشگاهی فوق‌پیشرفته",
+            description: "سیستم برودتی با عایق‌بندی چندلایه و کنترل دیجیتال هوشمند دما",
+            code: "PA-405",
+            cover: "/Freezer-With-Door-removebg-preview.png",
+          src:"product/1"
+        },
+        {
+            id: 4,
+            title: "شیربرقی سالت‌اسپری و محلول",
+            description: "قطعه جانبی دقیق با آب‌بندی صنعتی سازگار با محلول‌های خورنده آزمایشگاهی",
+            code: "PA-SV-03",
+            cover: null, // نمونه دوم بدون تصویر
+          src:"product/1"
+        },
+    ];
 
     return (
         <div className="w-full max-w-6xl mx-auto px-4 pb-6 relative group/slider font-irancell_semibold">
@@ -31,9 +64,9 @@ export const ProductSlider = () => {
                 }}
                 className="!py-2"
             >
-                {products.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <ProductCard />
+                {products.map((item) => (
+                    <SwiperSlide key={item.id}>
+                        <ProductCard product={item} />
                     </SwiperSlide>
                 ))}
             </Swiper>

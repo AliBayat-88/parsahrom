@@ -2,7 +2,7 @@ export const MENU_ITEMS = [
     {
         id: "products",
         title: "محصولات",
-        href: "#",
+        href: "product/1",
         icon: (
             <svg width="20" height="20" viewBox="0 0 50 50" className="dark:fill-slate-400 fill-slate-600 transition-colors group-hover:fill-slate-900 dark:group-hover:fill-white">
                 <g transform="translate(0,50) scale(0.1,-0.1)" stroke="none">
@@ -26,24 +26,31 @@ export const MENU_ITEMS = [
         ),
     },
     {
-        id: "contact",
-        title: "تماس با ما",
-        href: "#",
+        id: "standards",
+        title: "استانداردها",
+        href: "/standards",
         icon: (
-            <svg width="20" height="20" viewBox="0 0 50 50" className="dark:fill-slate-400 fill-slate-600 transition-colors group-hover:fill-slate-900 dark:group-hover:fill-white">
-                <g transform="translate(0,50) scale(0.1,-0.1)" stroke="none">
-                    <path d="M171 472 c-48 -24 -73 -62 -78 -119 -4 -54 2 -67 35 -77 16 -5 22 -3 22 8 0 24 41 46 85 46 22 0 51 7 64 16 29 21 41 10 48 -46 4 -25 13 -46 24 -53 25 -15 24 -39 -1 -62 -11 -10 -20 -23 -20 -29 0 -6 -12 -29 -26 -49 -14 -21 -24 -41 -21 -43 6 -6 67 67 67 80 0 5 7 18 17 28 12 14 17 42 19 117 3 88 1 102 -18 126 -11 14 -30 31 -42 36 -11 6 -32 16 -46 24 -34 20 -88 19 -129 -3z" />
-                    <path d="M77 242 c-22 -24 -21 -54 2 -101 24 -46 91 -108 126 -117 34 -8 75 10 75 35 0 25 -54 48 -75 31 -17 -14 -48 4 -76 47 -17 25 -17 29 -2 45 13 15 14 22 3 48 -14 34 -30 38 -53 12z" />
-                    <path d="M180 225 c0 -8 7 -15 15 -15 8 0 15 7 15 15 0 8 -7 15 -15 15 -8 0 -15 -7 -15 -15z" />
-                    <path d="M290 225 c0 -8 7 -15 15 -15 8 0 15 7 15 15 0 8 -7 15 -15 15 -8 0 -15 -7 -15 -15z" />
-                </g>
-            </svg>
+          <svg
+            viewBox="0 0 50 50"
+            fill="none"
+            width="24px"
+            height="24px"
+            stroke="currentColor"
+            strokeWidth={3}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className=""
+          >
+            <path d="M 15 28.5 L 10 43 L 17.5 39 L 21.5 47 L 24 33" />
+            <path d="M 35 28.5 L 40 43 L 32.5 39 L 28.5 47 L 26 33" />
+            <path d="M 21.69 5.64 A 3.5 3.5 0 0 1 28.31 5.64 A 3.5 3.5 0 0 1 34.05 8.95 A 3.5 3.5 0 0 1 37.36 14.69 A 3.5 3.5 0 0 1 37.36 21.31 A 3.5 3.5 0 0 1 34.05 27.05 A 3.5 3.5 0 0 1 28.31 30.36 A 3.5 3.5 0 0 1 21.69 30.36 A 3.5 3.5 0 0 1 15.95 27.05 A 3.5 3.5 0 0 1 12.64 21.31 A 3.5 3.5 0 0 1 12.64 14.69 A 3.5 3.5 0 0 1 15.95 8.95 A 3.5 3.5 0 0 1 21.69 5.64 Z" />
+          </svg>
         ),
     },
     {
         id: "about",
         title: "درباره ما",
-        href: "#",
+        href: "/aboutus",
         icon: (
             <svg
                 width="24px"

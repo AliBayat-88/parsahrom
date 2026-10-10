@@ -12,7 +12,7 @@ export const TitleSection = ({
           }`}
       >
         <div className="flex items-center gap-x-3">
-          <h2 className="text-xl md:text-2xl text-slate-800 dark:text-slate-100 tracking-tight">
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-slate-800 dark:text-slate-100 tracking-tight">
             {title}
           </h2>
         </div>

@@ -49,7 +49,7 @@ export const LocationPicker = ({ value, onChange }) => {
     const [isGettingLocation, setIsGettingLocation] = useState(false);
     const [isDark, setIsDark] = useState(false);
 
-    // برسی و شنود وضعیت دارک مود صفحه
+    // بررسی و شنود تغییرات دارک‌مود جهت به‌روزرسانی تم لایه نقشه
     useEffect(() => {
         const checkDarkMode = () => {
             setIsDark(document.documentElement.classList.contains("dark"));
@@ -93,7 +93,7 @@ export const LocationPicker = ({ value, onChange }) => {
             <div className="flex items-center justify-between">
                 <label className="text-xs text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                     <MapPin className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                    تعیین موقعیت دقیق روی نقشه (جهت اعزام کارشناس)
+                    تعیین موقعیت دقیق روی نقشه
                 </label>
 
                 <Button
@@ -113,7 +113,6 @@ export const LocationPicker = ({ value, onChange }) => {
                 </Button>
             </div>
 
-            {/* کانتینر نقشه Leaflet */}
             <div className="h-64 w-full rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 relative z-0">
                 <MapContainer
                     center={[value.lat, value.lng]}
