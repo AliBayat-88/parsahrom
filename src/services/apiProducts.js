@@ -17,10 +17,7 @@ export const getProducts = async () => {
     return data;
 };
 
-/**
- * دریافت اطلاعات یک محصول خاص با شناسه (ID)
- * @param {string|number} id
- */
+
 export const getProductById = async (id) => {
     const { data, error } = await supabase
         .from("product")

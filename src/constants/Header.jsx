@@ -2,7 +2,7 @@ export const MENU_ITEMS = [
     {
         id: "products",
         title: "محصولات",
-        href: "product/1",
+        href: "/products",
         icon: (
             <svg width="20" height="20" viewBox="0 0 50 50" className="dark:fill-slate-400 fill-slate-600 transition-colors group-hover:fill-slate-900 dark:group-hover:fill-white">
                 <g transform="translate(0,50) scale(0.1,-0.1)" stroke="none">

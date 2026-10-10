@@ -5,6 +5,7 @@ import { AfterSalesContainer } from "./components/AfterSalesContainer.jsx";
 import { ProductDetails } from "@/components/ProductDetails.jsx";
 import { AboutUsContainer } from "@/components/AboutUsContainer.jsx";
 import StandardsPage from "@/components/StandardsPage.jsx";
+import Products from '@/components/Products.jsx'
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Route path="/product/:id" element={<ProductDetails />} />
                 <Route path="/aboutus" element={<AboutUsContainer />} />
                 <Route path="/standards" element={<StandardsPage />} />
+              <Route path="/products" element={<Products />} />
             </Route>
         </Routes>
     );

@@ -81,24 +81,24 @@ export const ProductInquiryForm = ({ productTitle = "", productCode = "" }) => {
             className="max-w-4xl mt-10 mx-auto p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm transition-colors font-irancell_semibold"
             dir="rtl"
         >
-            <CardHeader className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-0 pb-6 border-b border-slate-100 dark:border-slate-800">
-                <div>
-                    <CardTitle className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                        <Building2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            <CardHeader className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-0 pb-6 border-b border-slate-100 dark:border-slate-800">
+                <div className="space-y-1">
+                    <CardTitle className="text-base sm:text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <Building2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                         درخواست استعلام قیمت و صدور پیش‌فاکتور
                     </CardTitle>
-                    <CardDescription className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    <CardDescription className="text-xs text-slate-500 dark:text-slate-400">
                         اطلاعات مورد نیاز جهت دریافت قیمت رسمی و شرایط تحویل را وارد فرمایید.
                     </CardDescription>
                 </div>
 
                 <Badge
                     variant="secondary"
-                    className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 self-start sm:self-auto"
+                    className="flex flex-wrap items-center gap-1.5 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 self-start sm:self-auto max-w-full text-right"
                 >
-                    <span className="text-xs text-slate-500 dark:text-slate-400">محصول:</span>
-                    <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">
-                        {productTitle} ({productCode})
+                    <span className="text-xs text-slate-500 dark:text-slate-400 shrink-0 font-normal">محصول:</span>
+                    <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 break-words">
+                        {productTitle} {productCode ? `(${productCode})` : ""}
                     </span>
                 </Badge>
             </CardHeader>
@@ -220,8 +220,6 @@ export const ProductInquiryForm = ({ productTitle = "", productCode = "" }) => {
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectItem value="تماس تلفنی">تماس تلفنی مستقیم</SelectItem>
-                                    <SelectItem value="ارسال پیام در تلگرام">ارسال پیام در تلگرام</SelectItem>
-                                    <SelectItem value="ارسال پیش‌فاکتور به ایمیل">ارسال پیش‌فاکتور به ایمیل</SelectItem>
                                 </SelectContent>
                             </Select>
                         </div>
@@ -242,7 +240,7 @@ export const ProductInquiryForm = ({ productTitle = "", productCode = "" }) => {
                     <Button
                         type="submit"
                         disabled={isSubmitting || !formData.fullName || !formData.phone}
-                        className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl transition-all shadow-md shadow-emerald-600/20 flex items-center justify-center gap-2 cursor-pointer"
+                        className="w-full mx-auto px-2 text-xs md:text-base bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl transition-all shadow-md shadow-emerald-600/20 flex items-center justify-center gap-1 cursor-pointer"
                     >
                         {isSubmitting ? (
                             <>

@@ -8,6 +8,8 @@ export const ProductSpecs = ({
     description = "",
     specs = [],
 }) => {
+    const validSpecs = Array.isArray(specs) ? specs : [];
+
     return (
         <div className="flex flex-col w-full justify-start gap-6 font-irancell_semibold">
             <div className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800 pb-4">
@@ -16,7 +18,7 @@ export const ProductSpecs = ({
                 </h1>
                 <Badge
                     variant="outline"
-                    className="self-start sm:self-auto px-3 py-1 text-xs font-mono rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 whitespace-nowrap"
+                    className="self-start sm:self-auto px-2.5 py-1 text-[11px] sm:text-xs font-mono rounded-lg bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 shrink-0"
                 >
                     کد محصول: {productCode}
                 </Badge>
@@ -27,7 +29,7 @@ export const ProductSpecs = ({
                     توضیحات اجمالی
                 </h2>
                 <p className="text-xs sm:text-sm leading-8 text-slate-600 dark:text-slate-300 text-justify">
-                    {description}
+                    {description || "توضیحاتی برای این محصول ثبت نشده است."}
                 </p>
             </Card>
 
@@ -43,21 +45,27 @@ export const ProductSpecs = ({
                     </span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {specs.map((spec, index) => (
-                        <div
-                            key={index}
-                            className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50/80 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/40 hover:border-emerald-500/40 transition-colors"
-                        >
-                            <span className="text-xs text-slate-500 dark:text-slate-400">
-                                {spec.label}
-                            </span>
-                            <span className="text-xs text-slate-900 dark:text-slate-200 font-bold dir-ltr text-left font-mono">
-                                {spec.value}
-                            </span>
-                        </div>
-                    ))}
-                </div>
+                {validSpecs.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {validSpecs.map((spec, index) => (
+                            <div
+                                key={index}
+                                className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50/80 dark:bg-slate-800/50 border border-slate-200/70 dark:border-slate-700/40 hover:border-emerald-500/40 transition-colors"
+                            >
+                                <span className="text-xs text-slate-500 dark:text-slate-400">
+                                    {spec?.label}
+                                </span>
+                                <span className="text-xs text-slate-900 dark:text-slate-200 font-bold dir-ltr text-left font-mono">
+                                    {spec?.value}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <p className="text-xs text-slate-400 dark:text-slate-500 py-2">
+                        مشخصات فنی تکمیلی از طریق بخش مشاوره یا استعلام تلفنی در دسترس است.
+                    </p>
+                )}
             </Card>
         </div>
     );
